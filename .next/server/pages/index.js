@@ -1,564 +1,125 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 405;
-exports.ids = [405];
+exports.id = "pages/index";
+exports.ids = ["pages/index"];
 exports.modules = {
 
-/***/ 527:
+/***/ "./Images/NETSY-WHITE.png":
+/*!********************************!*\
+  !*** ./Images/NETSY-WHITE.png ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/NETSY-WHITE.9e37ebca.png","height":340,"width":1000,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAQAAAAEwYbDAAAAPklEQVR42gEzAMz/AP5P/oL+ef50/oj+mv5x/mQA/rH+z/6H/nH+P/6V/rn+pwD+Sv5h/mD+Q/4S/lH+cP4/j2UikrSPww0AAAAASUVORK5CYII="});
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"src\":\"/_next/static/media/NETSY-WHITE.9e37ebca.png\",\"height\":340,\"width\":1000,\"blurDataURL\":\"/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FNETSY-WHITE.9e37ebca.png&w=8&q=70\"});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9JbWFnZXMvTkVUU1ktV0hJVEUucG5nLmpzIiwibWFwcGluZ3MiOiI7Ozs7QUFBQSxpRUFBZSxDQUFDLDhLQUE4SyIsInNvdXJjZXMiOlsid2VicGFjazovL215LWFwcC8uL0ltYWdlcy9ORVRTWS1XSElURS5wbmc/YTFkMCJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCB7XCJzcmNcIjpcIi9fbmV4dC9zdGF0aWMvbWVkaWEvTkVUU1ktV0hJVEUuOWUzN2ViY2EucG5nXCIsXCJoZWlnaHRcIjozNDAsXCJ3aWR0aFwiOjEwMDAsXCJibHVyRGF0YVVSTFwiOlwiL19uZXh0L2ltYWdlP3VybD0lMkZfbmV4dCUyRnN0YXRpYyUyRm1lZGlhJTJGTkVUU1ktV0hJVEUuOWUzN2ViY2EucG5nJnc9OCZxPTcwXCJ9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./Images/NETSY-WHITE.png\n");
 
 /***/ }),
 
-/***/ 110:
+/***/ "./Utils/Networks.js":
+/*!***************************!*\
+  !*** ./Utils/Networks.js ***!
+  \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ Home),
-  "getStaticProps": () => (/* binding */ getStaticProps)
-});
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(997);
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(689);
-// EXTERNAL MODULE: external "@chakra-ui/react"
-var react_ = __webpack_require__(930);
-;// CONCATENATED MODULE: external "@chakra-ui/icons"
-const icons_namespaceObject = require("@chakra-ui/icons");
-;// CONCATENATED MODULE: ./Utils/Networks.js
-const networkParams = {
-    "0x63564c40": {
-        chainId: "0x63564c40",
-        rpcUrls: [
-            "https://api.harmony.one"
-        ],
-        chainName: "Harmony Mainnet",
-        nativeCurrency: {
-            name: "ONE",
-            decimals: 18,
-            symbol: "ONE"
-        },
-        blockExplorerUrls: [
-            "https://explorer.harmony.one"
-        ],
-        iconUrls: [
-            "https://harmonynews.one/wp-content/uploads/2019/11/slfdjs.png"
-        ]
-    },
-    "0xa4ec": {
-        chainId: "0xa4ec",
-        rpcUrls: [
-            "https://forno.celo.org"
-        ],
-        chainName: "Celo Mainnet",
-        nativeCurrency: {
-            name: "CELO",
-            decimals: 18,
-            symbol: "CELO"
-        },
-        blockExplorerUrl: [
-            "https://explorer.celo.org"
-        ],
-        iconUrls: [
-            "https://celo.org/images/marketplace-icons/icon-celo-CELO-color-f.svg"
-        ]
-    }
-};
-
-;// CONCATENATED MODULE: ./Utils/Utils.js
-const truncateAddress = (address)=>{
-    if (!address) return "No Account";
-    const match = address.match(/^(0x[a-zA-Z0-9]{2})[a-zA-Z0-9]+([a-zA-Z0-9]{2})$/);
-    if (!match) return address;
-    return `${match[1]}…${match[2]}`;
-};
-const toHex = (num)=>{
-    const val = Number(num);
-    return "0x" + val.toString(16);
-};
-
-;// CONCATENATED MODULE: external "ethers"
-const external_ethers_namespaceObject = require("ethers");
-;// CONCATENATED MODULE: external "web3modal"
-const external_web3modal_namespaceObject = require("web3modal");
-var external_web3modal_default = /*#__PURE__*/__webpack_require__.n(external_web3modal_namespaceObject);
-;// CONCATENATED MODULE: external "@walletconnect/web3-provider"
-const web3_provider_namespaceObject = require("@walletconnect/web3-provider");
-var web3_provider_default = /*#__PURE__*/__webpack_require__.n(web3_provider_namespaceObject);
-;// CONCATENATED MODULE: ./Utils/providerOptions.js
-
-const providerOptions = {
-    walletconnect: {
-        package: (web3_provider_default()),
-        options: {
-            infuraId: "3be75b2217884d8d85a91da35b3b7a4f" // required
-        }
-    }
-};
-
-// EXTERNAL MODULE: ./Images/NETSY-WHITE.png
-var NETSY_WHITE = __webpack_require__(527);
-;// CONCATENATED MODULE: ./pages/index.js
-
-
-
-
-
-
-
-
-
-
-
-function Home({ avatars  }) {
-    const { 0: provider1 , 1: setProvider  } = (0,external_react_.useState)();
-    const { 0: library1 , 1: setLibrary  } = (0,external_react_.useState)();
-    const { 0: account , 1: setAccount  } = (0,external_react_.useState)();
-    const { 0: signature1 , 1: setSignature  } = (0,external_react_.useState)("");
-    const { 0: error1 , 1: setError  } = (0,external_react_.useState)("");
-    const { 0: chainId , 1: setChainId  } = (0,external_react_.useState)();
-    const { 0: network1 , 1: setNetwork  } = (0,external_react_.useState)();
-    const { 0: message , 1: setMessage  } = (0,external_react_.useState)("");
-    const { 0: signedMessage , 1: setSignedMessage  } = (0,external_react_.useState)("");
-    const { 0: verified , 1: setVerified  } = (0,external_react_.useState)();
-    const connectWallet = async ()=>{
-        if (false) {}
-    };
-    const handleNetwork = (e)=>{
-        const id = e.target.value;
-        setNetwork(Number(id));
-    };
-    const handleInput = (e)=>{
-        const msg = e.target.value;
-        setMessage(msg);
-    };
-    const switchNetwork = async ()=>{
-        try {
-            await library1.provider.request({
-                method: "wallet_switchEthereumChain",
-                params: [
-                    {
-                        chainId: toHex(network1)
-                    }
-                ]
-            });
-        } catch (switchError) {
-            if (switchError.code === 4902) {
-                try {
-                    await library1.provider.request({
-                        method: "wallet_addEthereumChain",
-                        params: [
-                            networkParams[toHex(network1)]
-                        ]
-                    });
-                } catch (error) {
-                    setError(error);
-                }
-            }
-        }
-    };
-    const signMessage = async ()=>{
-        if (!library1) return;
-        try {
-            const signature = await library1.provider.request({
-                method: "personal_sign",
-                params: [
-                    message,
-                    account
-                ]
-            });
-            setSignedMessage(message);
-            setSignature(signature);
-        } catch (error) {
-            setError(error);
-        }
-    };
-    const verifyMessage = async ()=>{
-        if (!library1) return;
-        try {
-            const verify = await library1.provider.request({
-                method: "personal_ecRecover",
-                params: [
-                    signedMessage,
-                    signature1
-                ]
-            });
-            setVerified(verify === account.toLowerCase());
-        } catch (error) {
-            setError(error);
-        }
-    };
-    const refreshState = ()=>{
-        setAccount();
-        setChainId();
-        setNetwork("");
-        setMessage("");
-        setSignature("");
-        setVerified(undefined);
-    };
-    const disconnect = async ()=>{
-        const web3Modal = new (external_web3modal_default())({
-            cacheProvider: true,
-            providerOptions: providerOptions
-        });
-        await web3Modal.clearCachedProvider();
-        refreshState();
-    };
-    (0,external_react_.useEffect)(()=>{
-        const web3Modal = new (external_web3modal_default())({
-            cacheProvider: true,
-            providerOptions: providerOptions
-        });
-        if (web3Modal.cachedProvider) {
-            connectWallet();
-        }
-    }, []);
-    (0,external_react_.useEffect)(()=>{
-        if (provider1?.on) {
-            const handleAccountsChanged = (accounts)=>{
-                console.log("accountsChanged", accounts);
-                if (accounts) setAccount(accounts[0]);
-            };
-            const handleChainChanged = (_hexChainId)=>{
-                setChainId(_hexChainId);
-            };
-            const handleDisconnect = ()=>{
-                console.log("disconnect", error1);
-                disconnect();
-            };
-            provider1.on("accountsChanged", handleAccountsChanged);
-            provider1.on("chainChanged", handleChainChanged);
-            provider1.on("disconnect", handleDisconnect);
-            return ()=>{
-                if (provider1.removeListener) {
-                    provider1.removeListener("accountsChanged", handleAccountsChanged);
-                    provider1.removeListener("chainChanged", handleChainChanged);
-                    provider1.removeListener("disconnect", handleDisconnect);
-                }
-            };
-        }
-    }, [
-        provider1
-    ]);
-    (0,external_react_.useEffect)(()=>{
-        setProvider(new external_ethers_namespaceObject.ethers.providers.Web3Provider(window.ethereum));
-    }, []);
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(react_.Flex, {
-                children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Box, {
-                    bg: "#278bff",
-                    w: "100%",
-                    p: 6,
-                    color: "white",
-                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Grid, {
-                        templateColumns: "repeat(3, 1fr)",
-                        gap: 6,
-                        children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx(react_.GridItem, {
-                                w: "100%",
-                                h: "10",
-                                children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Link, {
-                                    href: "/",
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Image, {
-                                        src: NETSY_WHITE/* default.src */.Z.src,
-                                        alt: "",
-                                        maxWidth: "120px"
-                                    })
-                                })
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(react_.GridItem, {
-                                w: "100%",
-                                h: "10"
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(react_.GridItem, {
-                                w: "100%",
-                                h: "10",
-                                align: "center",
-                                children: account ? /*#__PURE__*/ jsx_runtime_.jsx(react_.Button, {
-                                    colorScheme: "gray",
-                                    textColor: "black",
-                                    mr: [
-                                        "-5%",
-                                        "-10%",
-                                        "-30%",
-                                        "-50%",
-                                        "-60%"
-                                    ],
-                                    onClick: disconnect,
-                                    children: "Disconnect"
-                                }) : /*#__PURE__*/ jsx_runtime_.jsx(react_.Button, {
-                                    colorScheme: "gray",
-                                    textColor: "black",
-                                    mr: [
-                                        "-5%",
-                                        "-10%",
-                                        "-30%",
-                                        "-50%",
-                                        "-60%"
-                                    ],
-                                    onClick: connectWallet,
-                                    children: "Connect your wallet"
-                                })
-                            })
-                        ]
-                    })
-                })
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(react_.Container, {
-                maxW: "3xl",
-                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Stack, {
-                    as: react_.Box,
-                    textAlign: "center",
-                    spacing: {
-                        base: 8,
-                        md: 14
-                    },
-                    py: {
-                        base: 20,
-                        md: 36
-                    },
-                    children: [
-                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Heading, {
-                            fontWeight: 600,
-                            fontSize: {
-                                base: "2xl",
-                                sm: "4xl",
-                                md: "6xl"
-                            },
-                            lineHeight: "110%",
-                            children: [
-                                "Welcome to Nexis! ",
-                                /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-                                /*#__PURE__*/ jsx_runtime_.jsx(react_.Text, {
-                                    as: "span",
-                                    color: "#278bff",
-                                    children: "A decentralized space for creators and their audience!"
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx(react_.Text, {
-                            color: "gray.500",
-                            children: "Monetize your content by receiveing claps and donations from your most loyal readers and reward their loyalty with special NFTS."
-                        })
-                    ]
-                })
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(react_.Flex, {
-                bg: "#278bff",
-                children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Container, {
-                    maxW: "100%",
-                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Stack, {
-                        as: react_.Box,
-                        textAlign: "center",
-                        spacing: {
-                            base: 8,
-                            md: 14
-                        },
-                        py: {
-                            base: 20,
-                            md: 36
-                        },
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Heading, {
-                                fontWeight: 600,
-                                fontSize: {
-                                    base: "2xl",
-                                    sm: "4xl",
-                                    md: "6xl"
-                                },
-                                lineHeight: "110%",
-                                color: "white",
-                                children: [
-                                    "Discover Netsy Choices",
-                                    /*#__PURE__*/ jsx_runtime_.jsx("br", {})
-                                ]
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(react_.Text, {
-                                color: "white",
-                                children: "A currated list of our best creators"
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-                            /*#__PURE__*/ jsx_runtime_.jsx(react_.Center, {
-                                children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Grid, {
-                                    color: "white",
-                                    templateColumns: [
-                                        "repeat(1, 1fr)",
-                                        null,
-                                        "repeat(2, 1fr)",
-                                        "repeat(3, 1fr)",
-                                        "repeat(4, 1fr)",
-                                        "repeat(5, 1fr)"
-                                    ],
-                                    gap: 6,
-                                    w: "75%",
-                                    mb: "6px",
-                                    children: avatars && avatars.map((project)=>/*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                            children: /*#__PURE__*/ jsx_runtime_.jsx(react_.GridItem, {
-                                                w: "100%",
-                                                h: "10",
-                                                align: "center",
-                                                mb: "150px",
-                                                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Box, {
-                                                    maxW: "sm",
-                                                    alignContent: "center",
-                                                    color: "white",
-                                                    bg: "#131313",
-                                                    borderRadius: "10px",
-                                                    p: "2px",
-                                                    children: [
-                                                        /*#__PURE__*/ jsx_runtime_.jsx(react_.Stack, {
-                                                            direction: "row",
-                                                            alignItems: "center",
-                                                            children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Avatar, {
-                                                                mt: "5%",
-                                                                ml: "2%",
-                                                                src: project.photoUrl
-                                                            })
-                                                        }),
-                                                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Stack, {
-                                                            direction: "column",
-                                                            ml: "4%",
-                                                            mb: "5%",
-                                                            mt: "5%",
-                                                            children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Text, {
-                                                                    align: "left",
-                                                                    fontSize: "14px",
-                                                                    children: [
-                                                                        /*#__PURE__*/ jsx_runtime_.jsx("b", {
-                                                                            children: "Username: "
-                                                                        }),
-                                                                        project.name
-                                                                    ]
-                                                                }),
-                                                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Text, {
-                                                                    align: "left",
-                                                                    fontSize: "14px",
-                                                                    children: [
-                                                                        /*#__PURE__*/ jsx_runtime_.jsx("b", {
-                                                                            children: "Total Claps: "
-                                                                        }),
-                                                                        project.enemies
-                                                                    ]
-                                                                }),
-                                                                /*#__PURE__*/ jsx_runtime_.jsx(react_.Stack, {
-                                                                    direction: "row",
-                                                                    ml: "2%",
-                                                                    mb: "5%",
-                                                                    mt: "5%",
-                                                                    children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Button, {
-                                                                        variant: "solid",
-                                                                        bgGradient: "linear(to-l, #7928CA, #FF0080)",
-                                                                        color: "white",
-                                                                        w: "50%",
-                                                                        size: "sm",
-                                                                        mr: 1,
-                                                                        _hover: {
-                                                                            bg: "white",
-                                                                            color: "black"
-                                                                        },
-                                                                        children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Link, {
-                                                                            href: "/channels/" + project._id,
-                                                                            children: "View Channel"
-                                                                        }, project._id)
-                                                                    })
-                                                                })
-                                                            ]
-                                                        })
-                                                    ]
-                                                })
-                                            })
-                                        }, project._id)
-                                    )
-                                })
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(react_.Center, {
-                                children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Text, {
-                                    color: "white",
-                                    children: "In order to be able to register as a creator or to unlock the full potential of this DAPP, please connect your wallet."
-                                })
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(react_.Center, {
-                                children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Button, {
-                                    colorScheme: "gray",
-                                    textColor: "black",
-                                    maxW: "50%",
-                                    mt: "-20px",
-                                    children: "Connect your wallet"
-                                })
-                            })
-                        ]
-                    })
-                })
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(react_.Flex, {
-                align: "bottom",
-                children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Box, {
-                    bg: "#1f1f1f",
-                    w: "100%",
-                    p: 4,
-                    color: "white",
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(react_.Center, {
-                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_.Text, {
-                            children: [
-                                "DAPP created by ",
-                                /*#__PURE__*/ jsx_runtime_.jsx(react_.Link, {
-                                    href: "https://twitter.com/polthedev",
-                                    isExternal: true,
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx("b", {
-                                        children: "@PolTheDev"
-                                    })
-                                })
-                            ]
-                        })
-                    })
-                })
-            })
-        ]
-    });
-};
-async function getStaticProps() {
-    const avatars = await fetch("https://last-airbender-api.herokuapp.com/api/v1/characters").then((r)=>r.json()
-    );
-    return {
-        props: {
-            avatars
-        }
-    };
-}
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"networkParams\": () => (/* binding */ networkParams)\n/* harmony export */ });\nconst networkParams = {\n    \"0x63564c40\": {\n        chainId: \"0x63564c40\",\n        rpcUrls: [\n            \"https://api.harmony.one\"\n        ],\n        chainName: \"Harmony Mainnet\",\n        nativeCurrency: {\n            name: \"ONE\",\n            decimals: 18,\n            symbol: \"ONE\"\n        },\n        blockExplorerUrls: [\n            \"https://explorer.harmony.one\"\n        ],\n        iconUrls: [\n            \"https://harmonynews.one/wp-content/uploads/2019/11/slfdjs.png\"\n        ]\n    },\n    \"0xa4ec\": {\n        chainId: \"0xa4ec\",\n        rpcUrls: [\n            \"https://forno.celo.org\"\n        ],\n        chainName: \"Celo Mainnet\",\n        nativeCurrency: {\n            name: \"CELO\",\n            decimals: 18,\n            symbol: \"CELO\"\n        },\n        blockExplorerUrl: [\n            \"https://explorer.celo.org\"\n        ],\n        iconUrls: [\n            \"https://celo.org/images/marketplace-icons/icon-celo-CELO-color-f.svg\"\n        ]\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9VdGlscy9OZXR3b3Jrcy5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7O0FBQU8sTUFBTUEsYUFBYSxHQUFHO0lBQ3pCLFlBQVksRUFBRTtRQUNaQyxPQUFPLEVBQUUsWUFBWTtRQUNyQkMsT0FBTyxFQUFFO1lBQUMseUJBQXlCO1NBQUM7UUFDcENDLFNBQVMsRUFBRSxpQkFBaUI7UUFDNUJDLGNBQWMsRUFBRTtZQUFFQyxJQUFJLEVBQUUsS0FBSztZQUFFQyxRQUFRLEVBQUUsRUFBRTtZQUFFQyxNQUFNLEVBQUUsS0FBSztTQUFFO1FBQzVEQyxpQkFBaUIsRUFBRTtZQUFDLDhCQUE4QjtTQUFDO1FBQ25EQyxRQUFRLEVBQUU7WUFBQywrREFBK0Q7U0FBQztLQUM1RTtJQUNELFFBQVEsRUFBRTtRQUNSUixPQUFPLEVBQUUsUUFBUTtRQUNqQkMsT0FBTyxFQUFFO1lBQUMsd0JBQXdCO1NBQUM7UUFDbkNDLFNBQVMsRUFBRSxjQUFjO1FBQ3pCQyxjQUFjLEVBQUU7WUFBRUMsSUFBSSxFQUFFLE1BQU07WUFBRUMsUUFBUSxFQUFFLEVBQUU7WUFBRUMsTUFBTSxFQUFFLE1BQU07U0FBRTtRQUM5REcsZ0JBQWdCLEVBQUU7WUFBQywyQkFBMkI7U0FBQztRQUMvQ0QsUUFBUSxFQUFFO1lBQ1Isc0VBQXNFO1NBQ3ZFO0tBQ0Y7Q0FDRixDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbXktYXBwLy4vVXRpbHMvTmV0d29ya3MuanM/ODY2NyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgbmV0d29ya1BhcmFtcyA9IHtcbiAgICBcIjB4NjM1NjRjNDBcIjoge1xuICAgICAgY2hhaW5JZDogXCIweDYzNTY0YzQwXCIsXG4gICAgICBycGNVcmxzOiBbXCJodHRwczovL2FwaS5oYXJtb255Lm9uZVwiXSxcbiAgICAgIGNoYWluTmFtZTogXCJIYXJtb255IE1haW5uZXRcIixcbiAgICAgIG5hdGl2ZUN1cnJlbmN5OiB7IG5hbWU6IFwiT05FXCIsIGRlY2ltYWxzOiAxOCwgc3ltYm9sOiBcIk9ORVwiIH0sXG4gICAgICBibG9ja0V4cGxvcmVyVXJsczogW1wiaHR0cHM6Ly9leHBsb3Jlci5oYXJtb255Lm9uZVwiXSxcbiAgICAgIGljb25VcmxzOiBbXCJodHRwczovL2hhcm1vbnluZXdzLm9uZS93cC1jb250ZW50L3VwbG9hZHMvMjAxOS8xMS9zbGZkanMucG5nXCJdXG4gICAgfSxcbiAgICBcIjB4YTRlY1wiOiB7XG4gICAgICBjaGFpbklkOiBcIjB4YTRlY1wiLFxuICAgICAgcnBjVXJsczogW1wiaHR0cHM6Ly9mb3Juby5jZWxvLm9yZ1wiXSxcbiAgICAgIGNoYWluTmFtZTogXCJDZWxvIE1haW5uZXRcIixcbiAgICAgIG5hdGl2ZUN1cnJlbmN5OiB7IG5hbWU6IFwiQ0VMT1wiLCBkZWNpbWFsczogMTgsIHN5bWJvbDogXCJDRUxPXCIgfSxcbiAgICAgIGJsb2NrRXhwbG9yZXJVcmw6IFtcImh0dHBzOi8vZXhwbG9yZXIuY2Vsby5vcmdcIl0sXG4gICAgICBpY29uVXJsczogW1xuICAgICAgICBcImh0dHBzOi8vY2Vsby5vcmcvaW1hZ2VzL21hcmtldHBsYWNlLWljb25zL2ljb24tY2Vsby1DRUxPLWNvbG9yLWYuc3ZnXCJcbiAgICAgIF1cbiAgICB9XG4gIH07XG4gICJdLCJuYW1lcyI6WyJuZXR3b3JrUGFyYW1zIiwiY2hhaW5JZCIsInJwY1VybHMiLCJjaGFpbk5hbWUiLCJuYXRpdmVDdXJyZW5jeSIsIm5hbWUiLCJkZWNpbWFscyIsInN5bWJvbCIsImJsb2NrRXhwbG9yZXJVcmxzIiwiaWNvblVybHMiLCJibG9ja0V4cGxvcmVyVXJsIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./Utils/Networks.js\n");
 
 /***/ }),
 
-/***/ 930:
+/***/ "./Utils/Utils.js":
+/*!************************!*\
+  !*** ./Utils/Utils.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"toHex\": () => (/* binding */ toHex),\n/* harmony export */   \"truncateAddress\": () => (/* binding */ truncateAddress)\n/* harmony export */ });\nconst truncateAddress = (address)=>{\n    if (!address) return \"No Account\";\n    const match = address.match(/^(0x[a-zA-Z0-9]{2})[a-zA-Z0-9]+([a-zA-Z0-9]{2})$/);\n    if (!match) return address;\n    return `${match[1]}…${match[2]}`;\n};\nconst toHex = (num)=>{\n    const val = Number(num);\n    return \"0x\" + val.toString(16);\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9VdGlscy9VdGlscy5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7OztBQUFPLE1BQU1BLGVBQWUsR0FBRyxDQUFDQyxPQUFPLEdBQUs7SUFDeEMsSUFBSSxDQUFDQSxPQUFPLEVBQUUsT0FBTyxZQUFZLENBQUM7SUFDbEMsTUFBTUMsS0FBSyxHQUFHRCxPQUFPLENBQUNDLEtBQUssb0RBRTFCO0lBQ0QsSUFBSSxDQUFDQSxLQUFLLEVBQUUsT0FBT0QsT0FBTyxDQUFDO0lBQzNCLE9BQU8sQ0FBQyxFQUFFQyxLQUFLLENBQUMsQ0FBQyxDQUFDLENBQUMsR0FBQyxFQUFFQSxLQUFLLENBQUMsQ0FBQyxDQUFDLENBQUM7Q0FDaEMsQ0FBQztBQUVLLE1BQU1DLEtBQUssR0FBRyxDQUFDQyxHQUFHLEdBQUs7SUFDNUIsTUFBTUMsR0FBRyxHQUFHQyxNQUFNLENBQUNGLEdBQUcsQ0FBQztJQUN2QixPQUFPLElBQUksR0FBR0MsR0FBRyxDQUFDRSxRQUFRLENBQUMsRUFBRSxDQUFDLENBQUM7Q0FDaEMsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL215LWFwcC8uL1V0aWxzL1V0aWxzLmpzPzc0ZmQiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IHRydW5jYXRlQWRkcmVzcyA9IChhZGRyZXNzKSA9PiB7XG4gICAgaWYgKCFhZGRyZXNzKSByZXR1cm4gXCJObyBBY2NvdW50XCI7XG4gICAgY29uc3QgbWF0Y2ggPSBhZGRyZXNzLm1hdGNoKFxuICAgICAgL14oMHhbYS16QS1aMC05XXsyfSlbYS16QS1aMC05XSsoW2EtekEtWjAtOV17Mn0pJC9cbiAgICApO1xuICAgIGlmICghbWF0Y2gpIHJldHVybiBhZGRyZXNzO1xuICAgIHJldHVybiBgJHttYXRjaFsxXX3igKYke21hdGNoWzJdfWA7XG4gIH07XG4gIFxuICBleHBvcnQgY29uc3QgdG9IZXggPSAobnVtKSA9PiB7XG4gICAgY29uc3QgdmFsID0gTnVtYmVyKG51bSk7XG4gICAgcmV0dXJuIFwiMHhcIiArIHZhbC50b1N0cmluZygxNik7XG4gIH07XG4gICJdLCJuYW1lcyI6WyJ0cnVuY2F0ZUFkZHJlc3MiLCJhZGRyZXNzIiwibWF0Y2giLCJ0b0hleCIsIm51bSIsInZhbCIsIk51bWJlciIsInRvU3RyaW5nIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./Utils/Utils.js\n");
+
+/***/ }),
+
+/***/ "./Utils/providerOptions.js":
+/*!**********************************!*\
+  !*** ./Utils/providerOptions.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"providerOptions\": () => (/* binding */ providerOptions)\n/* harmony export */ });\n/* harmony import */ var _walletconnect_web3_provider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @walletconnect/web3-provider */ \"@walletconnect/web3-provider\");\n/* harmony import */ var _walletconnect_web3_provider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_walletconnect_web3_provider__WEBPACK_IMPORTED_MODULE_0__);\n\nconst providerOptions = {\n    walletconnect: {\n        package: (_walletconnect_web3_provider__WEBPACK_IMPORTED_MODULE_0___default()),\n        options: {\n            infuraId: \"3be75b2217884d8d85a91da35b3b7a4f\" // required\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9VdGlscy9wcm92aWRlck9wdGlvbnMuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQXlEO0FBRWxELE1BQU1DLGVBQWUsR0FBRztJQUM3QkMsYUFBYSxFQUFFO1FBQ2JDLE9BQU8sRUFBRUgscUVBQWE7UUFDdEJJLE9BQU8sRUFBRTtZQUNQQyxRQUFRLEVBQUMsa0NBQWtDLENBQUMsV0FBVztTQUN4RDtLQUNGO0NBQ0YsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL215LWFwcC8uL1V0aWxzL3Byb3ZpZGVyT3B0aW9ucy5qcz82OTc5Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBXYWxsZXRDb25uZWN0IGZyb20gXCJAd2FsbGV0Y29ubmVjdC93ZWIzLXByb3ZpZGVyXCI7XG5cbmV4cG9ydCBjb25zdCBwcm92aWRlck9wdGlvbnMgPSB7XG4gIHdhbGxldGNvbm5lY3Q6IHtcbiAgICBwYWNrYWdlOiBXYWxsZXRDb25uZWN0LCAvLyByZXF1aXJlZFxuICAgIG9wdGlvbnM6IHtcbiAgICAgIGluZnVyYUlkOlwiM2JlNzViMjIxNzg4NGQ4ZDg1YTkxZGEzNWIzYjdhNGZcIiAvLyByZXF1aXJlZFxuICAgIH1cbiAgfVxufTtcbiJdLCJuYW1lcyI6WyJXYWxsZXRDb25uZWN0IiwicHJvdmlkZXJPcHRpb25zIiwid2FsbGV0Y29ubmVjdCIsInBhY2thZ2UiLCJvcHRpb25zIiwiaW5mdXJhSWQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./Utils/providerOptions.js\n");
+
+/***/ }),
+
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home),\n/* harmony export */   \"getStaticProps\": () => (/* binding */ getStaticProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @chakra-ui/react */ \"@chakra-ui/react\");\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _Utils_Networks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Utils/Networks */ \"./Utils/Networks.js\");\n/* harmony import */ var _Utils_Utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Utils/Utils */ \"./Utils/Utils.js\");\n/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ethers */ \"ethers\");\n/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(ethers__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var web3modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! web3modal */ \"web3modal\");\n/* harmony import */ var web3modal__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(web3modal__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _Utils_providerOptions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Utils/providerOptions */ \"./Utils/providerOptions.js\");\n/* harmony import */ var _Images_NETSY_WHITE_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Images/NETSY-WHITE.png */ \"./Images/NETSY-WHITE.png\");\n\n\n\n\n\n\n\n\n\nfunction Home({ avatars  }) {\n    const { 0: provider1 , 1: setProvider  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();\n    const { 0: library1 , 1: setLibrary  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();\n    const { 0: account , 1: setAccount  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();\n    const { 0: signature1 , 1: setSignature  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(\"\");\n    const { 0: error1 , 1: setError  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(\"\");\n    const { 0: chainId , 1: setChainId  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();\n    const { 0: network1 , 1: setNetwork  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();\n    const { 0: message , 1: setMessage  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(\"\");\n    const { 0: signedMessage , 1: setSignedMessage  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(\"\");\n    const { 0: verified , 1: setVerified  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();\n    const connectWallet = async ()=>{\n        try {\n            const { ethereum  } = window;\n            const web3Modal = new (web3modal__WEBPACK_IMPORTED_MODULE_6___default())({\n                cacheProvider: true,\n                providerOptions: _Utils_providerOptions__WEBPACK_IMPORTED_MODULE_7__.providerOptions\n            });\n            if (!ethereum) {\n                alert(\"Get MetaMask!\");\n                return;\n            }\n            const provider = await web3Modal.connect();\n            const library = new ethers__WEBPACK_IMPORTED_MODULE_5__.ethers.providers.Web3Provider(provider);\n            const accounts = await library.listAccounts();\n            const network = await library.getNetwork();\n            setProvider(provider);\n            setLibrary(library);\n            if (accounts) setAccount(accounts[0]);\n            setChainId(network.chainId);\n        } catch (error) {\n            setError(error);\n        }\n    };\n    const handleNetwork = (e)=>{\n        const id = e.target.value;\n        setNetwork(Number(id));\n    };\n    const handleInput = (e)=>{\n        const msg = e.target.value;\n        setMessage(msg);\n    };\n    const switchNetwork = async ()=>{\n        try {\n            await library1.provider.request({\n                method: \"wallet_switchEthereumChain\",\n                params: [\n                    {\n                        chainId: (0,_Utils_Utils__WEBPACK_IMPORTED_MODULE_4__.toHex)(network1)\n                    }\n                ]\n            });\n        } catch (switchError) {\n            if (switchError.code === 4902) {\n                try {\n                    await library1.provider.request({\n                        method: \"wallet_addEthereumChain\",\n                        params: [\n                            _Utils_Networks__WEBPACK_IMPORTED_MODULE_3__.networkParams[(0,_Utils_Utils__WEBPACK_IMPORTED_MODULE_4__.toHex)(network1)]\n                        ]\n                    });\n                } catch (error) {\n                    setError(error);\n                }\n            }\n        }\n    };\n    const signMessage = async ()=>{\n        if (!library1) return;\n        try {\n            const signature = await library1.provider.request({\n                method: \"personal_sign\",\n                params: [\n                    message,\n                    account\n                ]\n            });\n            setSignedMessage(message);\n            setSignature(signature);\n        } catch (error) {\n            setError(error);\n        }\n    };\n    const verifyMessage = async ()=>{\n        if (!library1) return;\n        try {\n            const verify = await library1.provider.request({\n                method: \"personal_ecRecover\",\n                params: [\n                    signedMessage,\n                    signature1\n                ]\n            });\n            setVerified(verify === account.toLowerCase());\n        } catch (error) {\n            setError(error);\n        }\n    };\n    const refreshState = ()=>{\n        setAccount();\n        setChainId();\n        setNetwork(\"\");\n        setMessage(\"\");\n        setSignature(\"\");\n        setVerified(undefined);\n    };\n    const disconnect = async ()=>{\n        const web3Modal = new (web3modal__WEBPACK_IMPORTED_MODULE_6___default())({\n            cacheProvider: true,\n            providerOptions: _Utils_providerOptions__WEBPACK_IMPORTED_MODULE_7__.providerOptions\n        });\n        await web3Modal.clearCachedProvider();\n        refreshState();\n    };\n    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{\n        const web3Modal = new (web3modal__WEBPACK_IMPORTED_MODULE_6___default())({\n            cacheProvider: true,\n            providerOptions: _Utils_providerOptions__WEBPACK_IMPORTED_MODULE_7__.providerOptions\n        });\n        if (web3Modal.cachedProvider) {\n            connectWallet();\n        }\n    }, []);\n    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{\n        if (provider1?.on) {\n            const handleAccountsChanged = (accounts)=>{\n                console.log(\"accountsChanged\", accounts);\n                if (accounts) setAccount(accounts[0]);\n            };\n            const handleChainChanged = (_hexChainId)=>{\n                setChainId(_hexChainId);\n            };\n            const handleDisconnect = ()=>{\n                console.log(\"disconnect\", error1);\n                disconnect();\n            };\n            provider1.on(\"accountsChanged\", handleAccountsChanged);\n            provider1.on(\"chainChanged\", handleChainChanged);\n            provider1.on(\"disconnect\", handleDisconnect);\n            return ()=>{\n                if (provider1.removeListener) {\n                    provider1.removeListener(\"accountsChanged\", handleAccountsChanged);\n                    provider1.removeListener(\"chainChanged\", handleChainChanged);\n                    provider1.removeListener(\"disconnect\", handleDisconnect);\n                }\n            };\n        }\n    }, [\n        provider1\n    ]);\n    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{\n        setProvider(new ethers__WEBPACK_IMPORTED_MODULE_5__.ethers.providers.Web3Provider(window.ethereum));\n    }, []);\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Flex, {\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box, {\n                    bg: \"#278bff\",\n                    w: \"100%\",\n                    p: 6,\n                    color: \"white\",\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Grid, {\n                        templateColumns: \"repeat(3, 1fr)\",\n                        gap: 6,\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.GridItem, {\n                                w: \"100%\",\n                                h: \"10\",\n                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Link, {\n                                    href: \"/\",\n                                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Image, {\n                                        src: _Images_NETSY_WHITE_png__WEBPACK_IMPORTED_MODULE_8__[\"default\"].src,\n                                        alt: \"\",\n                                        maxWidth: \"120px\"\n                                    }, void 0, false, {\n                                        fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                        lineNumber: 188,\n                                        columnNumber: 38\n                                    }, this)\n                                }, void 0, false, {\n                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                    lineNumber: 188,\n                                    columnNumber: 21\n                                }, this)\n                            }, void 0, false, {\n                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                lineNumber: 187,\n                                columnNumber: 21\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.GridItem, {\n                                w: \"100%\",\n                                h: \"10\"\n                            }, void 0, false, {\n                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                lineNumber: 191,\n                                columnNumber: 21\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.GridItem, {\n                                w: \"100%\",\n                                h: \"10\",\n                                align: \"center\",\n                                children: account ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Button, {\n                                    colorScheme: \"gray\",\n                                    textColor: \"black\",\n                                    mr: [\n                                        \"-5%\",\n                                        \"-10%\",\n                                        \"-30%\",\n                                        \"-50%\",\n                                        \"-60%\"\n                                    ],\n                                    onClick: disconnect,\n                                    children: \"Disconnect\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                    lineNumber: 195,\n                                    columnNumber: 23\n                                }, this) : /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Button, {\n                                    colorScheme: \"gray\",\n                                    textColor: \"black\",\n                                    mr: [\n                                        \"-5%\",\n                                        \"-10%\",\n                                        \"-30%\",\n                                        \"-50%\",\n                                        \"-60%\"\n                                    ],\n                                    onClick: connectWallet,\n                                    children: \"Connect your wallet\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                    lineNumber: 200,\n                                    columnNumber: 27\n                                }, this)\n                            }, void 0, false, {\n                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                lineNumber: 193,\n                                columnNumber: 21\n                            }, this)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                        lineNumber: 185,\n                        columnNumber: 17\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                    lineNumber: 184,\n                    columnNumber: 13\n                }, this)\n            }, void 0, false, {\n                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                lineNumber: 183,\n                columnNumber: 1\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Container, {\n                maxW: \"3xl\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Stack, {\n                    as: _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box,\n                    textAlign: \"center\",\n                    spacing: {\n                        base: 8,\n                        md: 14\n                    },\n                    py: {\n                        base: 20,\n                        md: 36\n                    },\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Heading, {\n                            fontWeight: 600,\n                            fontSize: {\n                                base: \"2xl\",\n                                sm: \"4xl\",\n                                md: \"6xl\"\n                            },\n                            lineHeight: \"110%\",\n                            children: [\n                                \"Welcome to Nexis! \",\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"br\", {}, void 0, false, {\n                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                    lineNumber: 222,\n                                    columnNumber: 31\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {\n                                    as: \"span\",\n                                    color: \"#278bff\",\n                                    children: \"A decentralized space for creators and their audience!\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                    lineNumber: 223,\n                                    columnNumber: 13\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                            lineNumber: 218,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {\n                            color: \"gray.500\",\n                            children: \"Monetize your content by receiveing claps and donations from your most loyal readers and reward their loyalty with special NFTS.\"\n                        }, void 0, false, {\n                            fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                            lineNumber: 227,\n                            columnNumber: 11\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                    lineNumber: 213,\n                    columnNumber: 9\n                }, this)\n            }, void 0, false, {\n                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                lineNumber: 212,\n                columnNumber: 8\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Flex, {\n                bg: \"#278bff\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Container, {\n                    maxW: \"100%\",\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Stack, {\n                        as: _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box,\n                        textAlign: \"center\",\n                        spacing: {\n                            base: 8,\n                            md: 14\n                        },\n                        py: {\n                            base: 20,\n                            md: 36\n                        },\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Heading, {\n                                fontWeight: 600,\n                                fontSize: {\n                                    base: \"2xl\",\n                                    sm: \"4xl\",\n                                    md: \"6xl\"\n                                },\n                                lineHeight: \"110%\",\n                                color: \"white\",\n                                children: [\n                                    \"Discover Netsy Choices\",\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"br\", {}, void 0, false, {\n                                        fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                        lineNumber: 247,\n                                        columnNumber: 35\n                                    }, this)\n                                ]\n                            }, void 0, true, {\n                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                lineNumber: 243,\n                                columnNumber: 11\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {\n                                color: \"white\",\n                                children: \"A currated list of our best creators\"\n                            }, void 0, false, {\n                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                lineNumber: 249,\n                                columnNumber: 11\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"br\", {}, void 0, false, {\n                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                lineNumber: 251,\n                                columnNumber: 1\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Center, {\n                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Grid, {\n                                    color: \"white\",\n                                    templateColumns: [\n                                        \"repeat(1, 1fr)\",\n                                        null,\n                                        \"repeat(2, 1fr)\",\n                                        \"repeat(3, 1fr)\",\n                                        \"repeat(4, 1fr)\",\n                                        \"repeat(5, 1fr)\"\n                                    ],\n                                    gap: 6,\n                                    w: \"75%\",\n                                    mb: \"6px\",\n                                    children: avatars && avatars.map((project)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.GridItem, {\n                                                w: \"100%\",\n                                                h: \"10\",\n                                                align: \"center\",\n                                                mb: \"150px\",\n                                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box, {\n                                                    maxW: \"sm\",\n                                                    alignContent: \"center\",\n                                                    color: \"white\",\n                                                    bg: \"#131313\",\n                                                    borderRadius: \"10px\",\n                                                    p: \"2px\",\n                                                    children: [\n                                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Stack, {\n                                                            direction: \"row\",\n                                                            alignItems: \"center\",\n                                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Avatar, {\n                                                                mt: \"5%\",\n                                                                ml: \"2%\",\n                                                                src: project.photoUrl\n                                                            }, void 0, false, {\n                                                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                                lineNumber: 260,\n                                                                columnNumber: 13\n                                                            }, this)\n                                                        }, void 0, false, {\n                                                            fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                            lineNumber: 259,\n                                                            columnNumber: 9\n                                                        }, this),\n                                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Stack, {\n                                                            direction: \"column\",\n                                                            ml: \"4%\",\n                                                            mb: \"5%\",\n                                                            mt: \"5%\",\n                                                            children: [\n                                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {\n                                                                    align: \"left\",\n                                                                    fontSize: \"14px\",\n                                                                    children: [\n                                                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"b\", {\n                                                                            children: \"Username: \"\n                                                                        }, void 0, false, {\n                                                                            fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                                            lineNumber: 264,\n                                                                            columnNumber: 46\n                                                                        }, this),\n                                                                        project.name\n                                                                    ]\n                                                                }, void 0, true, {\n                                                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                                    lineNumber: 264,\n                                                                    columnNumber: 9\n                                                                }, this),\n                                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {\n                                                                    align: \"left\",\n                                                                    fontSize: \"14px\",\n                                                                    children: [\n                                                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"b\", {\n                                                                            children: \"Total Claps: \"\n                                                                        }, void 0, false, {\n                                                                            fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                                            lineNumber: 265,\n                                                                            columnNumber: 46\n                                                                        }, this),\n                                                                        project.enemies\n                                                                    ]\n                                                                }, void 0, true, {\n                                                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                                    lineNumber: 265,\n                                                                    columnNumber: 9\n                                                                }, this),\n                                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Stack, {\n                                                                    direction: \"row\",\n                                                                    ml: \"2%\",\n                                                                    mb: \"5%\",\n                                                                    mt: \"5%\",\n                                                                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Button, {\n                                                                        variant: \"solid\",\n                                                                        bgGradient: \"linear(to-l, #7928CA, #FF0080)\",\n                                                                        color: \"white\",\n                                                                        w: \"50%\",\n                                                                        size: \"sm\",\n                                                                        mr: 1,\n                                                                        _hover: {\n                                                                            bg: \"white\",\n                                                                            color: \"black\"\n                                                                        },\n                                                                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Link, {\n                                                                            href: \"/channels/\" + project._id,\n                                                                            children: \"View Channel\"\n                                                                        }, project._id, false, {\n                                                                            fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                                            lineNumber: 276,\n                                                                            columnNumber: 15\n                                                                        }, this)\n                                                                    }, void 0, false, {\n                                                                        fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                                        lineNumber: 267,\n                                                                        columnNumber: 9\n                                                                    }, this)\n                                                                }, void 0, false, {\n                                                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                                    lineNumber: 266,\n                                                                    columnNumber: 9\n                                                                }, this)\n                                                            ]\n                                                        }, void 0, true, {\n                                                            fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                            lineNumber: 263,\n                                                            columnNumber: 5\n                                                        }, this)\n                                                    ]\n                                                }, void 0, true, {\n                                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                    lineNumber: 258,\n                                                    columnNumber: 5\n                                                }, this)\n                                            }, void 0, false, {\n                                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                                lineNumber: 257,\n                                                columnNumber: 8\n                                            }, this)\n                                        }, project._id, false, {\n                                            fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                            lineNumber: 256,\n                                            columnNumber: 8\n                                        }, this)\n                                    )\n                                }, void 0, false, {\n                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                    lineNumber: 253,\n                                    columnNumber: 5\n                                }, this)\n                            }, void 0, false, {\n                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                lineNumber: 252,\n                                columnNumber: 5\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Center, {\n                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {\n                                    color: \"white\",\n                                    children: \"In order to be able to register as a creator or to unlock the full potential of this DAPP, please connect your wallet.\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                    lineNumber: 293,\n                                    columnNumber: 4\n                                }, this)\n                            }, void 0, false, {\n                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                lineNumber: 292,\n                                columnNumber: 4\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Center, {\n                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Button, {\n                                    colorScheme: \"gray\",\n                                    textColor: \"black\",\n                                    maxW: \"50%\",\n                                    mt: \"-20px\",\n                                    children: \"Connect your wallet\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                    lineNumber: 294,\n                                    columnNumber: 4\n                                }, this)\n                            }, void 0, false, {\n                                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                lineNumber: 293,\n                                columnNumber: 158\n                            }, this)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                        lineNumber: 238,\n                        columnNumber: 9\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                    lineNumber: 237,\n                    columnNumber: 1\n                }, this)\n            }, void 0, false, {\n                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                lineNumber: 236,\n                columnNumber: 6\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Flex, {\n                align: \"bottom\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box, {\n                    bg: \"#1f1f1f\",\n                    w: \"100%\",\n                    p: 4,\n                    color: \"white\",\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Center, {\n                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {\n                            children: [\n                                \"DAPP created by \",\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Link, {\n                                    href: \"https://twitter.com/polthedev\",\n                                    isExternal: true,\n                                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"b\", {\n                                        children: \"@PolTheDev\"\n                                    }, void 0, false, {\n                                        fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                        lineNumber: 305,\n                                        columnNumber: 83\n                                    }, this)\n                                }, void 0, false, {\n                                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                                    lineNumber: 305,\n                                    columnNumber: 29\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                            lineNumber: 305,\n                            columnNumber: 7\n                        }, this)\n                    }, void 0, false, {\n                        fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                        lineNumber: 304,\n                        columnNumber: 7\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                    lineNumber: 303,\n                    columnNumber: 5\n                }, this)\n            }, void 0, false, {\n                fileName: \"/Users/paulsocarde/Desktop/Polygon Hackathon/NextApp/pages/index.js\",\n                lineNumber: 302,\n                columnNumber: 6\n            }, this)\n        ]\n    }, void 0, true);\n};\nasync function getStaticProps() {\n    const avatars = await fetch(\"https://last-airbender-api.herokuapp.com/api/v1/characters\").then((r)=>r.json()\n    );\n    return {\n        props: {\n            avatars\n        }\n    };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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O2dCQUFDZ0csS0FBSyxFQUFDLFFBQVE7MEJBQ3JCLDRFQUFDL0YsaURBQUc7b0JBQUNvRixFQUFFLEVBQUMsU0FBUztvQkFBQ0MsQ0FBQyxFQUFDLE1BQU07b0JBQUNDLENBQUMsRUFBRSxDQUFDO29CQUFFQyxLQUFLLEVBQUMsT0FBTzs4QkFDNUMsNEVBQUM3RSxvREFBTTtrQ0FDUCw0RUFBQ1Qsa0RBQUk7O2dDQUFDLGtCQUFnQjs4Q0FBQSw4REFBQ0ssa0RBQUk7b0NBQUNxRixJQUFJLEVBQUMsK0JBQStCO29DQUFDd0MsVUFBVTs4Q0FBQyw0RUFBQ1IsR0FBQztrREFBQyxZQUFVOzs7Ozs0Q0FBSTs7Ozs7d0NBQU87Ozs7OztnQ0FBTzs7Ozs7NEJBQ2xHOzs7Ozt3QkFDTDs7Ozs7b0JBQ0M7O29CQUNMLENBQ0g7Q0FDRjtBQUVNLGVBQWVTLGNBQWMsR0FBRztJQUN2QyxNQUFNaEgsT0FBTyxHQUFHLE1BQU1pSCxLQUFLLENBQUMsNERBQTRELENBQUMsQ0FDeEZDLElBQUksQ0FBQ0MsQ0FBQUEsQ0FBQyxHQUFJQSxDQUFDLENBQUNDLElBQUksRUFBRTtJQUFBLENBQUM7SUFDcEIsT0FBTztRQUNIQyxLQUFLLEVBQUU7WUFBQ3JILE9BQU87U0FBQztLQUNqQjtDQUNGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbXktYXBwLy4vcGFnZXMvaW5kZXguanM/YmVlNyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlRWZmZWN0LCB1c2VTdGF0ZSB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHsgXG4gIEZsZXgsIEJveCwgVGV4dCxcbiAgR3JpZCwgR3JpZEl0ZW0sIFxuICBCdXR0b24sIEltYWdlLCBMaW5rLCBDb250YWluZXIsIFN0YWNrLCBIZWFkaW5nLFxuICBDZW50ZXIsIEF2YXRhclxuICB9IGZyb20gJ0BjaGFrcmEtdWkvcmVhY3QnXG5cblxuICBpbXBvcnQgeyBuZXR3b3JrUGFyYW1zIH0gZnJvbSBcIi4uL1V0aWxzL05ldHdvcmtzXCI7XG4gIGltcG9ydCB7IHRvSGV4LCB0cnVuY2F0ZUFkZHJlc3MgfSBmcm9tIFwiLi4vVXRpbHMvVXRpbHNcIjtcbiAgaW1wb3J0IHsgZXRoZXJzIH0gZnJvbSBcImV0aGVyc1wiO1xuICBpbXBvcnQgV2ViM01vZGFsIGZyb20gXCJ3ZWIzbW9kYWxcIjtcbiAgaW1wb3J0IHsgcHJvdmlkZXJPcHRpb25zIH0gZnJvbSBcIi4uL1V0aWxzL3Byb3ZpZGVyT3B0aW9uc1wiO1xuICBcbmltcG9ydCBMb2dvIGZyb20gXCIuLi9JbWFnZXMvTkVUU1ktV0hJVEUucG5nXCJcblxuXG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEhvbWUoe2F2YXRhcnN9KSB7XG5cbiAgY29uc3QgW3Byb3ZpZGVyLCBzZXRQcm92aWRlcl0gPSB1c2VTdGF0ZSgpO1xuICBjb25zdCBbbGlicmFyeSwgc2V0TGlicmFyeV0gPSB1c2VTdGF0ZSgpO1xuICBjb25zdCBbYWNjb3VudCwgc2V0QWNjb3VudF0gPSB1c2VTdGF0ZSgpO1xuICBjb25zdCBbc2lnbmF0dXJlLCBzZXRTaWduYXR1cmVdID0gdXNlU3RhdGUoXCJcIik7XG4gIGNvbnN0IFtlcnJvciwgc2V0RXJyb3JdID0gdXNlU3RhdGUoXCJcIik7XG4gIGNvbnN0IFtjaGFpbklkLCBzZXRDaGFpbklkXSA9IHVzZVN0YXRlKCk7XG4gIGNvbnN0IFtuZXR3b3JrLCBzZXROZXR3b3JrXSA9IHVzZVN0YXRlKCk7XG4gIGNvbnN0IFttZXNzYWdlLCBzZXRNZXNzYWdlXSA9IHVzZVN0YXRlKFwiXCIpO1xuICBjb25zdCBbc2lnbmVkTWVzc2FnZSwgc2V0U2lnbmVkTWVzc2FnZV0gPSB1c2VTdGF0ZShcIlwiKTtcbiAgY29uc3QgW3ZlcmlmaWVkLCBzZXRWZXJpZmllZF0gPSB1c2VTdGF0ZSgpO1xuXG4gIGNvbnN0IGNvbm5lY3RXYWxsZXQgPSBhc3luYyAoKSA9PiB7XG5cbiAgICAgIHRyeSB7XG4gICAgICAgIGNvbnN0IHsgZXRoZXJldW0gfSA9IHdpbmRvdztcbiAgICAgICAgY29uc3Qgd2ViM01vZGFsID0gbmV3IFdlYjNNb2RhbCh7XG4gICAgICAgICAgY2FjaGVQcm92aWRlcjogdHJ1ZSwgLy8gb3B0aW9uYWxcbiAgICAgICAgICBwcm92aWRlck9wdGlvbnMgLy8gcmVxdWlyZWRcbiAgICAgICAgfSk7XG5cbiAgICAgICAgaWYgKCFldGhlcmV1bSkge1xuICAgICAgICAgIGFsZXJ0KFwiR2V0IE1ldGFNYXNrIVwiKTtcbiAgICAgICAgICByZXR1cm47XG4gICAgICAgIH1cblxuICAgICAgICBjb25zdCBwcm92aWRlciA9IGF3YWl0IHdlYjNNb2RhbC5jb25uZWN0KCk7XG4gICAgICAgIGNvbnN0IGxpYnJhcnkgPSBuZXcgZXRoZXJzLnByb3ZpZGVycy5XZWIzUHJvdmlkZXIocHJvdmlkZXIpO1xuICAgICAgICBjb25zdCBhY2NvdW50cyA9IGF3YWl0IGxpYnJhcnkubGlzdEFjY291bnRzKCk7XG4gICAgICAgIGNvbnN0IG5ldHdvcmsgPSBhd2FpdCBsaWJyYXJ5LmdldE5ldHdvcmsoKTtcbiAgICAgICAgc2V0UHJvdmlkZXIocHJvdmlkZXIpO1xuICAgICAgICBzZXRMaWJyYXJ5KGxpYnJhcnkpO1xuICAgICAgICBpZiAoYWNjb3VudHMpIHNldEFjY291bnQoYWNjb3VudHNbMF0pO1xuICAgICAgICBzZXRDaGFpbklkKG5ldHdvcmsuY2hhaW5JZCk7XG4gICAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgICBzZXRFcnJvcihlcnJvcik7XG4gICAgICB9XG4gICAgXG4gICBcbiAgfTtcblxuICBjb25zdCBoYW5kbGVOZXR3b3JrID0gKGUpID0+IHtcbiAgICBjb25zdCBpZCA9IGUudGFyZ2V0LnZhbHVlO1xuICAgIHNldE5ldHdvcmsoTnVtYmVyKGlkKSk7XG4gIH07XG5cbiAgY29uc3QgaGFuZGxlSW5wdXQgPSAoZSkgPT4ge1xuICAgIGNvbnN0IG1zZyA9IGUudGFyZ2V0LnZhbHVlO1xuICAgIHNldE1lc3NhZ2UobXNnKTtcbiAgfTtcblxuICBjb25zdCBzd2l0Y2hOZXR3b3JrID0gYXN5bmMgKCkgPT4ge1xuICAgIHRyeSB7XG4gICAgICBhd2FpdCBsaWJyYXJ5LnByb3ZpZGVyLnJlcXVlc3Qoe1xuICAgICAgICBtZXRob2Q6IFwid2FsbGV0X3N3aXRjaEV0aGVyZXVtQ2hhaW5cIixcbiAgICAgICAgcGFyYW1zOiBbeyBjaGFpbklkOiB0b0hleChuZXR3b3JrKSB9XVxuICAgICAgfSk7XG4gICAgfSBjYXRjaCAoc3dpdGNoRXJyb3IpIHtcbiAgICAgIGlmIChzd2l0Y2hFcnJvci5jb2RlID09PSA0OTAyKSB7XG4gICAgICAgIHRyeSB7XG4gICAgICAgICAgYXdhaXQgbGlicmFyeS5wcm92aWRlci5yZXF1ZXN0KHtcbiAgICAgICAgICAgIG1ldGhvZDogXCJ3YWxsZXRfYWRkRXRoZXJldW1DaGFpblwiLFxuICAgICAgICAgICAgcGFyYW1zOiBbbmV0d29ya1BhcmFtc1t0b0hleChuZXR3b3JrKV1dXG4gICAgICAgICAgfSk7XG4gICAgICAgIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgICAgICAgc2V0RXJyb3IoZXJyb3IpO1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9O1xuXG4gIGNvbnN0IHNpZ25NZXNzYWdlID0gYXN5bmMgKCkgPT4ge1xuICAgIGlmICghbGlicmFyeSkgcmV0dXJuO1xuICAgIHRyeSB7XG4gICAgICBjb25zdCBzaWduYXR1cmUgPSBhd2FpdCBsaWJyYXJ5LnByb3ZpZGVyLnJlcXVlc3Qoe1xuICAgICAgICBtZXRob2Q6IFwicGVyc29uYWxfc2lnblwiLFxuICAgICAgICBwYXJhbXM6IFttZXNzYWdlLCBhY2NvdW50XVxuICAgICAgfSk7XG4gICAgICBzZXRTaWduZWRNZXNzYWdlKG1lc3NhZ2UpO1xuICAgICAgc2V0U2lnbmF0dXJlKHNpZ25hdHVyZSk7XG4gICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgIHNldEVycm9yKGVycm9yKTtcbiAgICB9XG4gIH07XG5cbiAgY29uc3QgdmVyaWZ5TWVzc2FnZSA9IGFzeW5jICgpID0+IHtcbiAgICBpZiAoIWxpYnJhcnkpIHJldHVybjtcbiAgICB0cnkge1xuICAgICAgY29uc3QgdmVyaWZ5ID0gYXdhaXQgbGlicmFyeS5wcm92aWRlci5yZXF1ZXN0KHtcbiAgICAgICAgbWV0aG9kOiBcInBlcnNvbmFsX2VjUmVjb3ZlclwiLFxuICAgICAgICBwYXJhbXM6IFtzaWduZWRNZXNzYWdlLCBzaWduYXR1cmVdXG4gICAgICB9KTtcbiAgICAgIHNldFZlcmlmaWVkKHZlcmlmeSA9PT0gYWNjb3VudC50b0xvd2VyQ2FzZSgpKTtcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgc2V0RXJyb3IoZXJyb3IpO1xuICAgIH1cbiAgfTtcblxuICBjb25zdCByZWZyZXNoU3RhdGUgPSAoKSA9PiB7XG4gICAgc2V0QWNjb3VudCgpO1xuICAgIHNldENoYWluSWQoKTtcbiAgICBzZXROZXR3b3JrKFwiXCIpO1xuICAgIHNldE1lc3NhZ2UoXCJcIik7XG4gICAgc2V0U2lnbmF0dXJlKFwiXCIpO1xuICAgIHNldFZlcmlmaWVkKHVuZGVmaW5lZCk7XG4gIH07XG5cbiAgY29uc3QgZGlzY29ubmVjdCA9IGFzeW5jICgpID0+IHtcbiAgICBjb25zdCB3ZWIzTW9kYWwgPSBuZXcgV2ViM01vZGFsKHtcbiAgICAgIGNhY2hlUHJvdmlkZXI6IHRydWUsIC8vIG9wdGlvbmFsXG4gICAgICBwcm92aWRlck9wdGlvbnMgLy8gcmVxdWlyZWRcbiAgICB9KTtcbiAgICBhd2FpdCB3ZWIzTW9kYWwuY2xlYXJDYWNoZWRQcm92aWRlcigpO1xuICAgIHJlZnJlc2hTdGF0ZSgpO1xuICB9O1xuXG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgY29uc3Qgd2ViM01vZGFsID0gbmV3IFdlYjNNb2RhbCh7XG4gICAgICBjYWNoZVByb3ZpZGVyOiB0cnVlLCAvLyBvcHRpb25hbFxuICAgICAgcHJvdmlkZXJPcHRpb25zIC8vIHJlcXVpcmVkXG4gICAgfSk7XG4gICAgaWYgKHdlYjNNb2RhbC5jYWNoZWRQcm92aWRlcikge1xuICAgICAgY29ubmVjdFdhbGxldCgpO1xuICAgIH1cbiAgfSwgW10pO1xuXG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgaWYgKHByb3ZpZGVyPy5vbikge1xuICAgICAgY29uc3QgaGFuZGxlQWNjb3VudHNDaGFuZ2VkID0gKGFjY291bnRzKSA9PiB7XG4gICAgICAgIGNvbnNvbGUubG9nKFwiYWNjb3VudHNDaGFuZ2VkXCIsIGFjY291bnRzKTtcbiAgICAgICAgaWYgKGFjY291bnRzKSBzZXRBY2NvdW50KGFjY291bnRzWzBdKTtcbiAgICAgIH07XG5cbiAgICAgIGNvbnN0IGhhbmRsZUNoYWluQ2hhbmdlZCA9IChfaGV4Q2hhaW5JZCkgPT4ge1xuICAgICAgICBzZXRDaGFpbklkKF9oZXhDaGFpbklkKTtcbiAgICAgIH07XG5cbiAgICAgIGNvbnN0IGhhbmRsZURpc2Nvbm5lY3QgPSAoKSA9PiB7XG4gICAgICAgIGNvbnNvbGUubG9nKFwiZGlzY29ubmVjdFwiLCBlcnJvcik7XG4gICAgICAgIGRpc2Nvbm5lY3QoKTtcbiAgICAgIH07XG5cbiAgICAgIHByb3ZpZGVyLm9uKFwiYWNjb3VudHNDaGFuZ2VkXCIsIGhhbmRsZUFjY291bnRzQ2hhbmdlZCk7XG4gICAgICBwcm92aWRlci5vbihcImNoYWluQ2hhbmdlZFwiLCBoYW5kbGVDaGFpbkNoYW5nZWQpO1xuICAgICAgcHJvdmlkZXIub24oXCJkaXNjb25uZWN0XCIsIGhhbmRsZURpc2Nvbm5lY3QpO1xuXG4gICAgICByZXR1cm4gKCkgPT4ge1xuICAgICAgICBpZiAocHJvdmlkZXIucmVtb3ZlTGlzdGVuZXIpIHtcbiAgICAgICAgICBwcm92aWRlci5yZW1vdmVMaXN0ZW5lcihcImFjY291bnRzQ2hhbmdlZFwiLCBoYW5kbGVBY2NvdW50c0NoYW5nZWQpO1xuICAgICAgICAgIHByb3ZpZGVyLnJlbW92ZUxpc3RlbmVyKFwiY2hhaW5DaGFuZ2VkXCIsIGhhbmRsZUNoYWluQ2hhbmdlZCk7XG4gICAgICAgICAgcHJvdmlkZXIucmVtb3ZlTGlzdGVuZXIoXCJkaXNjb25uZWN0XCIsIGhhbmRsZURpc2Nvbm5lY3QpO1xuICAgICAgICB9XG4gICAgICB9O1xuICAgIH1cbiAgfSwgW3Byb3ZpZGVyXSk7XG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBzZXRQcm92aWRlcihuZXcgZXRoZXJzLnByb3ZpZGVycy5XZWIzUHJvdmlkZXIod2luZG93LmV0aGVyZXVtKSlcbn0sIFtdKTtcblxuICByZXR1cm4gKFxuICAgPD5cbjxGbGV4PlxuICAgICAgICAgICAgPEJveCBiZz0nIzI3OGJmZicgdz0nMTAwJScgIHA9ezZ9IGNvbG9yPSd3aGl0ZSc+XG4gICAgICAgICAgICAgICAgPEdyaWQgdGVtcGxhdGVDb2x1bW5zPSdyZXBlYXQoMywgMWZyKScgZ2FwPXs2fT5cblxuICAgICAgICAgICAgICAgICAgICA8R3JpZEl0ZW0gdz0nMTAwJScgaD0nMTAnPlxuICAgICAgICAgICAgICAgICAgICA8TGluayBocmVmPXsnLyd9PjxJbWFnZSBzcmM9e0xvZ28uc3JjfSBhbHQ9eycnfSAgbWF4V2lkdGg9XCIxMjBweFwiLz48L0xpbms+XG4gICAgICAgICAgICAgICAgICAgIDwvR3JpZEl0ZW0+XG5cbiAgICAgICAgICAgICAgICAgICAgPEdyaWRJdGVtIHc9JzEwMCUnIGg9JzEwJy8+XG4gICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICA8R3JpZEl0ZW0gdz0nMTAwJScgaD0nMTAnIGFsaWduPVwiY2VudGVyXCI+XG4gICAgICAgICAgICAgICAgICAgIHthY2NvdW50ID8gKFxuICAgICAgICAgICAgICAgICAgICAgIDxCdXR0b24gY29sb3JTY2hlbWU9J2dyYXknIHRleHRDb2xvcj17XCJibGFja1wifSBcbiAgICAgICAgICAgICAgICAgICAgIG1yPXtbJy01JScsJy0xMCUnLCctMzAlJywnLTUwJScsJy02MCUnXX0gXG4gICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17ZGlzY29ubmVjdH0+RGlzY29ubmVjdDwvQnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgKTpcbiAgICAgICAgICAgICAgICAgICAgICAgIChcbiAgICAgICAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiBjb2xvclNjaGVtZT0nZ3JheScgdGV4dENvbG9yPXtcImJsYWNrXCJ9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICBtcj17WyctNSUnLCctMTAlJywnLTMwJScsJy01MCUnLCctNjAlJ119IFxuICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9e2Nvbm5lY3RXYWxsZXR9PkNvbm5lY3QgeW91ciB3YWxsZXQ8L0J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICl9XG5cbiAgICAgICAgICAgICAgICAgICAgPC9HcmlkSXRlbT5cbiAgICAgICAgICAgICAgICA8L0dyaWQ+XG4gICAgICAgICAgICA8L0JveD5cbiAgICAgICAgIFxuPC9GbGV4PlxuXG5cbiAgICAgICA8Q29udGFpbmVyIG1heFc9eyczeGwnfT5cbiAgICAgICAgPFN0YWNrXG4gICAgICAgICAgYXM9e0JveH1cbiAgICAgICAgICB0ZXh0QWxpZ249eydjZW50ZXInfVxuICAgICAgICAgIHNwYWNpbmc9e3sgYmFzZTogOCwgbWQ6IDE0IH19XG4gICAgICAgICAgcHk9e3sgYmFzZTogMjAsIG1kOiAzNiB9fT5cbiAgICAgICAgICA8SGVhZGluZ1xuICAgICAgICAgICAgZm9udFdlaWdodD17NjAwfVxuICAgICAgICAgICAgZm9udFNpemU9e3sgYmFzZTogJzJ4bCcsIHNtOiAnNHhsJywgbWQ6ICc2eGwnIH19XG4gICAgICAgICAgICBsaW5lSGVpZ2h0PXsnMTEwJSd9PlxuICAgICAgICAgICAgV2VsY29tZSB0byBOZXhpcyEgPGJyIC8+XG4gICAgICAgICAgICA8VGV4dCBhcz17J3NwYW4nfSBjb2xvcj17JyMyNzhiZmYnfT5cbiAgICAgICAgICAgICBBIGRlY2VudHJhbGl6ZWQgc3BhY2UgZm9yIGNyZWF0b3JzIGFuZCB0aGVpciBhdWRpZW5jZSFcbiAgICAgICAgICAgIDwvVGV4dD5cbiAgICAgICAgICA8L0hlYWRpbmc+XG4gICAgICAgICAgPFRleHQgY29sb3I9eydncmF5LjUwMCd9PlxuICAgICAgICAgICAgTW9uZXRpemUgeW91ciBjb250ZW50IGJ5IHJlY2VpdmVpbmcgY2xhcHMgYW5kIGRvbmF0aW9ucyBmcm9tIHlvdXIgbW9zdCBsb3lhbCByZWFkZXJzIGFuZCByZXdhcmRcbiAgICAgICAgICAgIHRoZWlyIGxveWFsdHkgd2l0aCBzcGVjaWFsIE5GVFMuIFxuICAgICAgICAgIDwvVGV4dD5cbiAgICAgICAgPC9TdGFjaz5cbiAgICAgIDwvQ29udGFpbmVyPlxuXG5cblxuICAgICA8RmxleCAgYmc9XCIjMjc4YmZmXCI+XG48Q29udGFpbmVyIG1heFc9eycxMDAlJ30+XG4gICAgICAgIDxTdGFja1xuICAgICAgICAgIGFzPXtCb3h9XG4gICAgICAgICAgdGV4dEFsaWduPXsnY2VudGVyJ31cbiAgICAgICAgICBzcGFjaW5nPXt7IGJhc2U6IDgsIG1kOiAxNCB9fVxuICAgICAgICAgIHB5PXt7IGJhc2U6IDIwLCBtZDogMzYgfX0+XG4gICAgICAgICAgPEhlYWRpbmdcbiAgICAgICAgICAgIGZvbnRXZWlnaHQ9ezYwMH1cbiAgICAgICAgICAgIGZvbnRTaXplPXt7IGJhc2U6ICcyeGwnLCBzbTogJzR4bCcsIG1kOiAnNnhsJyB9fVxuICAgICAgICAgICAgbGluZUhlaWdodD17JzExMCUnfSBjb2xvcj0nd2hpdGUnPlxuICAgICAgICAgICAgRGlzY292ZXIgTmV0c3kgQ2hvaWNlczxiciAvPlxuICAgICAgICAgIDwvSGVhZGluZz5cbiAgICAgICAgICA8VGV4dCBjb2xvcj0nd2hpdGUnPkEgY3VycmF0ZWQgbGlzdCBvZiBvdXIgYmVzdCBjcmVhdG9yczwvVGV4dD5cbiAgICAgICAgXG48YnIvPlxuICAgIDxDZW50ZXI+XG4gICAgPEdyaWQgY29sb3I9J3doaXRlJyB0ZW1wbGF0ZUNvbHVtbnM9e1sncmVwZWF0KDEsIDFmciknLCBudWxsLCAncmVwZWF0KDIsIDFmciknLCAncmVwZWF0KDMsIDFmciknLCAncmVwZWF0KDQsIDFmciknLCAncmVwZWF0KDUsIDFmciknXX0gZ2FwPXs2fSB3PSc3NSUnIG1iPSc2cHgnPlxuXG4gICAge2F2YXRhcnMgJiYgYXZhdGFycy5tYXAocHJvamVjdCA9PiAoXG4gICAgICAgPGRpdiBrZXk9e3Byb2plY3QuX2lkfSA+XG4gICAgICAgPEdyaWRJdGVtIHc9JzEwMCUnIGg9JzEwJyBhbGlnbj0nY2VudGVyJyBtYj0nMTUwcHgnPlxuICAgIDxCb3ggbWF4Vz0nc20nICBhbGlnbkNvbnRlbnQ9eydjZW50ZXInfSBjb2xvcj1cIndoaXRlXCIgYmc9JyMxMzEzMTMnIGJvcmRlclJhZGl1cz17JzEwcHgnfSBwPXsnMnB4J30+XG4gICAgICAgIDxTdGFjayBkaXJlY3Rpb249J3JvdycgYWxpZ25JdGVtcz0nY2VudGVyJz5cbiAgICAgICAgICAgIDxBdmF0YXIgbXQ9JzUlJyBtbD0nMiUnIHNyYz17cHJvamVjdC5waG90b1VybH0gLz5cbiAgIDwvU3RhY2s+XG4gICAgXG4gICAgPFN0YWNrIGRpcmVjdGlvbj0nY29sdW1uJyBtbD0nNCUnIG1iPSc1JScgbXQ9JzUlJz4gIFxuICAgICAgICA8VGV4dCBhbGlnbj0nbGVmdCcgZm9udFNpemU9eycxNHB4J30+PGI+VXNlcm5hbWU6IDwvYj57cHJvamVjdC5uYW1lfTwvVGV4dD5cbiAgICAgICAgPFRleHQgYWxpZ249J2xlZnQnIGZvbnRTaXplPXsnMTRweCd9PjxiPlRvdGFsIENsYXBzOiA8L2I+e3Byb2plY3QuZW5lbWllc308L1RleHQ+XG4gICAgICAgIDxTdGFjayBkaXJlY3Rpb249J3JvdycgbWw9JzIlJyBtYj0nNSUnIG10PSc1JSc+XG4gICAgICAgIDxCdXR0b25cbiAgICAgICAgICAgICAgdmFyaWFudD17J3NvbGlkJ31cbiAgICAgICAgICAgICAgYmdHcmFkaWVudD0nbGluZWFyKHRvLWwsICM3OTI4Q0EsICNGRjAwODApJ1xuICAgICAgICAgICAgICBjb2xvcj0nd2hpdGUnXG4gICAgICAgICAgICAgIHc9JzUwJSdcbiAgICAgICAgICAgICAgc2l6ZT17J3NtJ31cbiAgICAgICAgICAgICAgbXI9ezF9XG4gICAgICAgICAgICAgIF9ob3Zlcj17eyBiZzogJ3doaXRlJyxcbiAgICAgICAgICAgICAgY29sb3I6J2JsYWNrJ319PlxuICAgICAgICAgICAgICA8TGluayBocmVmPXsnL2NoYW5uZWxzLycgKyBwcm9qZWN0Ll9pZH0ga2V5PXtwcm9qZWN0Ll9pZH0+XG4gICAgICAgICAgICAgIFZpZXcgQ2hhbm5lbFxuICAgICAgICAgICAgICA8L0xpbms+XG4gICAgICAgICAgICA8L0J1dHRvbj5cbiAgICAgICAgICAgIDwvU3RhY2s+XG4gICAgICAgICAgICA8L1N0YWNrPlxuICAgICAgICAgICAgXG5cbiAgICA8L0JveD5cbiAgICA8L0dyaWRJdGVtPlxuICAgICAgIDwvZGl2PlxuICAgKSl9XG5cbiAgICA8L0dyaWQ+XG4gICAgXG4gICA8L0NlbnRlcj5cbiAgIDxDZW50ZXI+XG4gICA8VGV4dCBjb2xvcj0nd2hpdGUnPkluIG9yZGVyIHRvIGJlIGFibGUgdG8gcmVnaXN0ZXIgYXMgYSBjcmVhdG9yIG9yIHRvIHVubG9jayB0aGUgZnVsbCBwb3RlbnRpYWwgb2YgdGhpcyBEQVBQLCBwbGVhc2UgY29ubmVjdCB5b3VyIHdhbGxldC48L1RleHQ+PC9DZW50ZXI+PENlbnRlcj5cbiAgIDxCdXR0b24gY29sb3JTY2hlbWU9J2dyYXknIHRleHRDb2xvcj17XCJibGFja1wifSBtYXhXPVwiNTAlXCIgbXQ9Jy0yMHB4Jz5Db25uZWN0IHlvdXIgd2FsbGV0PC9CdXR0b24+XG4gICA8L0NlbnRlcj4gICBcbiAgICAgICAgPC9TdGFjaz5cbiAgICAgICAgXG4gICAgICA8L0NvbnRhaW5lcj5cbiAgICAgIDwvRmxleD5cbiAgICAgIFxuXG4gICAgIDxGbGV4IGFsaWduPSdib3R0b20nPlxuICAgIDxCb3ggYmc9JyMxZjFmMWYnIHc9JzEwMCUnIHA9ezR9IGNvbG9yPSd3aGl0ZSc+XG4gICAgICA8Q2VudGVyPlxuICAgICAgPFRleHQ+REFQUCBjcmVhdGVkIGJ5IDxMaW5rIGhyZWY9XCJodHRwczovL3R3aXR0ZXIuY29tL3BvbHRoZWRldlwiIGlzRXh0ZXJuYWw+PGI+QFBvbFRoZURldjwvYj48L0xpbms+PC9UZXh0PlxuICAgICAgPC9DZW50ZXI+XG4gICAgPC9Cb3g+XG4gICAgPC9GbGV4PlxuICAgPC8+XG4gIClcbn1cblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFN0YXRpY1Byb3BzKCkge1xuY29uc3QgYXZhdGFycyA9IGF3YWl0IGZldGNoKCdodHRwczovL2xhc3QtYWlyYmVuZGVyLWFwaS5oZXJva3VhcHAuY29tL2FwaS92MS9jaGFyYWN0ZXJzJylcbi50aGVuKHIgPT4gci5qc29uKCkpO1xucmV0dXJuIHtcbiAgICBwcm9wczoge2F2YXRhcnN9XG4gIH1cbn1cbiJdLCJuYW1lcyI6WyJSZWFjdCIsInVzZUVmZmVjdCIsInVzZVN0YXRlIiwiRmxleCIsIkJveCIsIlRleHQiLCJHcmlkIiwiR3JpZEl0ZW0iLCJCdXR0b24iLCJJbWFnZSIsIkxpbmsiLCJDb250YWluZXIiLCJTdGFjayIsIkhlYWRpbmciLCJDZW50ZXIiLCJBdmF0YXIiLCJuZXR3b3JrUGFyYW1zIiwidG9IZXgiLCJ0cnVuY2F0ZUFkZHJlc3MiLCJldGhlcnMiLCJXZWIzTW9kYWwiLCJwcm92aWRlck9wdGlvbnMiLCJMb2dvIiwiSG9tZSIsImF2YXRhcnMiLCJwcm92aWRlciIsInNldFByb3ZpZGVyIiwibGlicmFyeSIsInNldExpYnJhcnkiLCJhY2NvdW50Iiwic2V0QWNjb3VudCIsInNpZ25hdHVyZSIsInNldFNpZ25hdHVyZSIsImVycm9yIiwic2V0RXJyb3IiLCJjaGFpbklkIiwic2V0Q2hhaW5JZCIsIm5ldHdvcmsiLCJzZXROZXR3b3JrIiwibWVzc2FnZSIsInNldE1lc3NhZ2UiLCJzaWduZWRNZXNzYWdlIiwic2V0U2lnbmVkTWVzc2FnZSIsInZlcmlmaWVkIiwic2V0VmVyaWZpZWQiLCJjb25uZWN0V2FsbGV0IiwiZXRoZXJldW0iLCJ3aW5kb3ciLCJ3ZWIzTW9kYWwiLCJjYWNoZVByb3ZpZGVyIiwiYWxlcnQiLCJjb25uZWN0IiwicHJvdmlkZXJzIiwiV2ViM1Byb3ZpZGVyIiwiYWNjb3VudHMiLCJsaXN0QWNjb3VudHMiLCJnZXROZXR3b3JrIiwiaGFuZGxlTmV0d29yayIsImUiLCJpZCIsInRhcmdldCIsInZhbHVlIiwiTnVtYmVyIiwiaGFuZGxlSW5wdXQiLCJtc2ciLCJzd2l0Y2hOZXR3b3JrIiwicmVxdWVzdCIsIm1ldGhvZCIsInBhcmFtcyIsInN3aXRjaEVycm9yIiwiY29kZSIsInNpZ25NZXNzYWdlIiwidmVyaWZ5TWVzc2FnZSIsInZlcmlmeSIsInRvTG93ZXJDYXNlIiwicmVmcmVzaFN0YXRlIiwidW5kZWZpbmVkIiwiZGlzY29ubmVjdCIsImNsZWFyQ2FjaGVkUHJvdmlkZXIiLCJjYWNoZWRQcm92aWRlciIsIm9uIiwiaGFuZGxlQWNjb3VudHNDaGFuZ2VkIiwiY29uc29sZSIsImxvZyIsImhhbmRsZUNoYWluQ2hhbmdlZCIsIl9oZXhDaGFpbklkIiwiaGFuZGxlRGlzY29ubmVjdCIsInJlbW92ZUxpc3RlbmVyIiwiYmciLCJ3IiwicCIsImNvbG9yIiwidGVtcGxhdGVDb2x1bW5zIiwiZ2FwIiwiaCIsImhyZWYiLCJzcmMiLCJhbHQiLCJtYXhXaWR0aCIsImFsaWduIiwiY29sb3JTY2hlbWUiLCJ0ZXh0Q29sb3IiLCJtciIsIm9uQ2xpY2siLCJtYXhXIiwiYXMiLCJ0ZXh0QWxpZ24iLCJzcGFjaW5nIiwiYmFzZSIsIm1kIiwicHkiLCJmb250V2VpZ2h0IiwiZm9udFNpemUiLCJzbSIsImxpbmVIZWlnaHQiLCJiciIsIm1iIiwibWFwIiwicHJvamVjdCIsImRpdiIsImFsaWduQ29udGVudCIsImJvcmRlclJhZGl1cyIsImRpcmVjdGlvbiIsImFsaWduSXRlbXMiLCJtdCIsIm1sIiwicGhvdG9VcmwiLCJiIiwibmFtZSIsImVuZW1pZXMiLCJ2YXJpYW50IiwiYmdHcmFkaWVudCIsInNpemUiLCJfaG92ZXIiLCJfaWQiLCJpc0V4dGVybmFsIiwiZ2V0U3RhdGljUHJvcHMiLCJmZXRjaCIsInRoZW4iLCJyIiwianNvbiIsInByb3BzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./pages/index.js\n");
+
+/***/ }),
+
+/***/ "@chakra-ui/react":
+/*!***********************************!*\
+  !*** external "@chakra-ui/react" ***!
+  \***********************************/
 /***/ ((module) => {
 
 module.exports = require("@chakra-ui/react");
 
 /***/ }),
 
-/***/ 689:
+/***/ "@walletconnect/web3-provider":
+/*!***********************************************!*\
+  !*** external "@walletconnect/web3-provider" ***!
+  \***********************************************/
+/***/ ((module) => {
+
+module.exports = require("@walletconnect/web3-provider");
+
+/***/ }),
+
+/***/ "ethers":
+/*!*************************!*\
+  !*** external "ethers" ***!
+  \*************************/
+/***/ ((module) => {
+
+module.exports = require("ethers");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
 /***/ ((module) => {
 
 module.exports = require("react");
 
 /***/ }),
 
-/***/ 997:
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
 /***/ ((module) => {
 
-module.exports = require("react/jsx-runtime");
+module.exports = require("react/jsx-dev-runtime");
+
+/***/ }),
+
+/***/ "web3modal":
+/*!****************************!*\
+  !*** external "web3modal" ***!
+  \****************************/
+/***/ ((module) => {
+
+module.exports = require("web3modal");
 
 /***/ })
 
@@ -569,7 +130,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(110));
+var __webpack_exports__ = (__webpack_exec__("./pages/index.js"));
 module.exports = __webpack_exports__;
 
 })();

@@ -31,7 +31,7 @@ export default function Home({avatars}) {
   const [verified, setVerified] = useState();
 
   const connectWallet = async () => {
-    if (typeof window !== 'undefined'){
+
       try {
         const { ethereum } = window;
         const web3Modal = new Web3Modal({
@@ -55,7 +55,7 @@ export default function Home({avatars}) {
       } catch (error) {
         setError(error);
       }
-    }
+    
    
   };
 
