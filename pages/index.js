@@ -3,11 +3,10 @@ import {
   Flex, Box, Text,
   Grid, GridItem, 
   Button, Image, Link, Container, Stack, Heading,
-  Center, Avatar, Badge
+  Center, Avatar
   } from '@chakra-ui/react'
 
-  import { CloseIcon } from "@chakra-ui/icons";
-  import { Tooltip } from "@chakra-ui/react";
+
   import { networkParams } from "../Utils/Networks";
   import { toHex, truncateAddress } from "../Utils/Utils";
   import { ethers } from "ethers";
