@@ -42,16 +42,16 @@ export default function Home({avatars}) {
         if (!ethereum) {
           alert("Get MetaMask!");
           return;
-        }
+        } else {        const provider = await web3Modal.connect();
+          const library = new ethers.providers.Web3Provider(provider);
+          const accounts = await library.listAccounts();
+          const network = await library.getNetwork();
+          setProvider(provider);
+          setLibrary(library);
+          if (accounts) setAccount(accounts[0]);
+          setChainId(network.chainId);}
 
-        const provider = await web3Modal.connect();
-        const library = new ethers.providers.Web3Provider(provider);
-        const accounts = await library.listAccounts();
-        const network = await library.getNetwork();
-        setProvider(provider);
-        setLibrary(library);
-        if (accounts) setAccount(accounts[0]);
-        setChainId(network.chainId);
+
       } catch (error) {
         setError(error);
       }
