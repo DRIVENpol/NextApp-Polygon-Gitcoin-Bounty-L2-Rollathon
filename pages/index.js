@@ -30,10 +30,53 @@ export default function Home({avatars}) {
   const [signedMessage, setSignedMessage] = useState("");
   const [verified, setVerified] = useState();
 
+  const factorySc = "0xA349D6dBd8e72126e263823FC499c3F24499db1b"
+
+  const [isCreator, setIsCreator] = useState();
+
+  const checkCreator = async () => {
+    try {  
+
+      const web3Modal = new Web3Modal({
+        cacheProvider: true, // optional
+        providerOptions // required
+      });
+
+      const provider = await web3Modal.connect();
+      const library = new ethers.providers.Web3Provider(provider);
+      const accounts = await library.listAccounts();
+      const network = await library.getNetwork();
+      setProvider(provider);
+      setLibrary(library);
+      if (accounts) setAccount(accounts[0]);
+      setChainId(network.chainId);
+
+      if (library) {
+        // Conenct to the smart contract
+
+        const contractAbi = [
+          "function checkCreator(address _who) public view returns(uint256)"
+        ];
+
+        const tokenContract = new ethers.Contract(
+          factorySc,
+          contractAbi,
+          library
+        );
+
+        const _isCreator = await tokenContract.checkCreator(accounts[0]);
+        setIsCreator(_isCreator.toNumber());
+      } else {
+        console.log("Library object doesn't exist!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const connectWallet = async () => {
     if (typeof window !== 'undefined'){
       try {
-        const { ethereum } = window;
         const web3Modal = new Web3Modal({
           cacheProvider: true, // optional
           providerOptions // required
@@ -48,6 +91,9 @@ export default function Home({avatars}) {
         setLibrary(library);
         if (accounts) setAccount(accounts[0]);
         setChainId(network.chainId);
+
+        checkCreator();
+
       } catch (error) {
         setError(error);
       }
@@ -137,6 +183,7 @@ export default function Home({avatars}) {
     });
     if (web3Modal.cachedProvider) {
       connectWallet();
+      checkCreator();
     }
   }, []);
 
@@ -177,6 +224,8 @@ export default function Home({avatars}) {
       setProvider(providerOptions.walletconnect)
     }
 }, []);
+
+
 
   return (
    <>
