@@ -31,7 +31,7 @@ export default function Home({avatars}) {
   const [verified, setVerified] = useState();
 
   const connectWallet = async () => {
-
+    if (typeof window !== 'undefined'){
       try {
         const { ethereum } = window;
         const web3Modal = new Web3Modal({
@@ -39,11 +39,7 @@ export default function Home({avatars}) {
           providerOptions // required
         });
 
-        if (!ethereum) {
-          alert("Get MetaMask!");
-          return;
-        }
-
+        
         const provider = await web3Modal.connect();
         const library = new ethers.providers.Web3Provider(provider);
         const accounts = await library.listAccounts();
@@ -55,7 +51,7 @@ export default function Home({avatars}) {
       } catch (error) {
         setError(error);
       }
-    
+    }
    
   };
 
@@ -175,7 +171,11 @@ export default function Home({avatars}) {
   }, [provider]);
 
   useEffect(() => {
-    setProvider(new ethers.providers.Web3Provider(window.ethereum))
+    if (window.ethereum){
+      setProvider(new ethers.providers.Web3Provider(window.ethereum))
+    } else {
+      setProvider(providerOptions.walletconnect)
+    }
 }, []);
 
   return (
