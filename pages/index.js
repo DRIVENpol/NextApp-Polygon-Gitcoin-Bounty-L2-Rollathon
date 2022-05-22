@@ -37,20 +37,6 @@ export default function Home({avatars}) {
   const checkCreator = async () => {
     try {  
 
-      const web3Modal = new Web3Modal({
-        cacheProvider: true, // optional
-        providerOptions // required
-      });
-
-      const provider = await web3Modal.connect();
-      const library = new ethers.providers.Web3Provider(provider);
-      const accounts = await library.listAccounts();
-      const network = await library.getNetwork();
-      setProvider(provider);
-      setLibrary(library);
-      if (accounts) setAccount(accounts[0]);
-      setChainId(network.chainId);
-
       if (library) {
         // Conenct to the smart contract
 
@@ -63,9 +49,12 @@ export default function Home({avatars}) {
           contractAbi,
           library
         );
+        
+        const _address = ethers.utils.getAddress(account);
+        const _isCreator = await tokenContract.callStatic.checkCreator(_address);
 
-        const _isCreator = await tokenContract.checkCreator(accounts[0]);
         setIsCreator(_isCreator.toNumber());
+        console.log(isCreator.toNumber())
       } else {
         console.log("Library object doesn't exist!");
       }
@@ -277,6 +266,16 @@ export default function Home({avatars}) {
             Monetize your content by receiveing claps and donations from your most loyal readers and reward
             their loyalty with special NFTS. 
           </Text>
+          {account ? (<>
+            {!isCreator == 0 ? (<Center>
+                          <Button colorScheme='messenger' 
+                      onClick={connectWallet}>See Your Dashboard</Button>
+                              </Center>):(<Center>
+                          <Button colorScheme='messenger' 
+                      onClick={connectWallet}>Became A Creator</Button>
+                              </Center>)}
+          </>) :
+                       null}
         </Stack>
       </Container>
 
@@ -338,12 +337,21 @@ export default function Home({avatars}) {
     </Grid>
     
    </Center>
-   <Center>
-   <Text color='white'>In order to be able to register as a creator or to unlock the full potential of this DAPP, please connect your wallet.</Text></Center><Center>
-   <Button colorScheme='gray' textColor={"black"} maxW="50%" mt='-20px'>Connect your wallet</Button>
-   </Center>   
+
+   {!account ? (   <Center><Text color='white'>In order to be able to register as a creator or to unlock the full potential of this DAPP, please connect your wallet.</Text></Center>): null}
+
+  {account ? null :
+                        (     <Center>
+                          <Button colorScheme='gray' textColor={"black"} 
+                      onClick={connectWallet}>Connect your wallet</Button>
+                              </Center>)}
+
+{!isCreator == 1 && account ? (<Center>
+<Button colorScheme='gray' textColor={"black"}  align='center'        
+                      >See My Dashboard</Button>
+                          </Center>):null}
+  
         </Stack>
-        
       </Container>
       </Flex>
       
